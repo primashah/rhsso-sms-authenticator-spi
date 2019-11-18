@@ -1,0 +1,4 @@
+rhsso/authenticator/challenge/SMSOptInChallengeTest.class
+rhsso/authenticator/models/MobileNumberTest.class
+rhsso/authenticator/challenge/AuthCodeChallengeTest.class
+rhsso/authenticator/sms/SMSTwilioTest.class

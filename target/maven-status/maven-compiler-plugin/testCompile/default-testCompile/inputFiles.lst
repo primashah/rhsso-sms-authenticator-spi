@@ -1,0 +1,4 @@
+/Users/pshah/redhat_projects/DAFM/internal/sms-auth-spi/src/test/java/rhsso/authenticator/models/MobileNumberTest.java
+/Users/pshah/redhat_projects/DAFM/internal/sms-auth-spi/src/test/java/rhsso/authenticator/challenge/SMSOptInChallengeTest.java
+/Users/pshah/redhat_projects/DAFM/internal/sms-auth-spi/src/test/java/rhsso/authenticator/challenge/AuthCodeChallengeTest.java
+/Users/pshah/redhat_projects/DAFM/internal/sms-auth-spi/src/test/java/rhsso/authenticator/sms/SMSTwilioTest.java
