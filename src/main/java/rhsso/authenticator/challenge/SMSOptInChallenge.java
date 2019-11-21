@@ -81,6 +81,7 @@ public class SMSOptInChallenge {
     }
 
     public boolean isValid(){
+
         if(this.mobileNumber != null) {
             return this.mobileNumber.isValid();
         }

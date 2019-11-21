@@ -2,8 +2,9 @@ package rhsso.authenticator.models;
 
 import org.junit.jupiter.api.Test;
 
-import static org.mockito.Mockito.*;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -32,14 +33,26 @@ public class MobileNumberTest {
     @Test
     public void notValidMobileNumber(){
         MobileNumber number = new MobileNumber("123456");
-        assertFalse(number.isValid(), "Mobile number should not be in correct format");
+       assertFalse(number.isValid(), "Mobile number should not be in correct format");
 
     }
 
     @Test
     public void validMobileNumber(){
         MobileNumber number = new MobileNumber("353876988528");
-        assertFalse(number.isValid(), "Mobile number should  be in correct format");
+        assertTrue(number.isValid(), "Mobile number should  be in correct format");
 
+    }
+
+    @Test
+    public void sampleMobileTest(){
+        String regex = "^((\\+|00)(\\d{1,3})[\\s-]?)?(\\d{9})$";
+        String str = "00353876988528";
+        Pattern p = Pattern.compile(regex);
+        Matcher m = p.matcher(str);
+        if (m.matches())
+        {
+
+        }
     }
 }

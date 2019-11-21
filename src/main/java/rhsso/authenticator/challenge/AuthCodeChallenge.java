@@ -68,8 +68,8 @@ public class AuthCodeChallenge {
 
     public AuthCodeChallenge saveChallenge(){
 
-        this.authContext.getUser().setAttribute(SMSConstants.ATTR_VERIFICATION_CODE, Arrays.asList(this.verificationCode));
         this.authContext.getUser().setAttribute(SMSConstants.ATTR_VERIFICATION_EXPIRATION_DATE, Arrays.asList(String.valueOf(this.verificationExpiryDate)));
+        this.authContext.getUser().setAttribute(SMSConstants.ATTR_VERIFICATION_CODE, Arrays.asList(this.verificationCode));
         return this;
     }
     public AuthCodeChallenge clearChallenge(){
