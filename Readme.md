@@ -1,4 +1,4 @@
-# rhsso-push-notification-authenticator-spi
+# rhsso-sms-authenticator-spi
 
 This authentication SPI allows to implement 2factor authentication by sending verification code as SMS using Twilio on  mobile device
 
@@ -39,7 +39,7 @@ This authentication SPI allows to implement 2factor authentication by sending ve
 		mvn clean install wildfly:deploy
 		
 	Add two templates to the rhsso server:
-        $ cp themes/push-notification-2fa _RHSSO_HOME_/themes/
+        $ cp cp themes/rhsso/login _RHSSO_HOME_/themes/rhsso/login
 
 ## Configure RHSSO to use SMS as Two Factor Authentication.
  
