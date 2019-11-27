@@ -38,7 +38,7 @@ public class SMSAuthenticator implements Authenticator {
             return authCodeChallenge.getChallenge();
         }else{
             // SMS Not Send Successfully, please try another number.
-            return smsOptIn.getErrorChallenge(SMSConstants.SMS_NOT_SEND_MESSAGE);
+            return authCodeChallenge.getSMSErrorChallenge(SMSConstants.SMS_NOT_SEND_MESSAGE);
         }
     }
 

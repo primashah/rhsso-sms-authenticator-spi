@@ -17,6 +17,8 @@ public class SMSConstants {
     public static final String CONFIG_TWILIO_ACCOUNT_TOKEN = "twilio_account_token";
     public static final String CONFIG_TWILIO_FROM_PHONE = "twilio_from_phone";
 
+    public static final String SMSOptInForm = "sms-opt-in-input.ftl";
+
 
 
 }

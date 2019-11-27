@@ -78,21 +78,24 @@ public class AuthCodeChallenge {
         return this;
     }
     protected Response getExpiredCodeChallenge(){
-        Response challenge = this.authContext.form()
-                .setError(SMSConstants.EXPIRED_VERIFICATION_CODE_EXPIRED_MESSAGE)
-                .createForm(SMSConstants.SMSCodeInputForm);
 
-        return challenge;
+        return this.getSMSErrorChallenge(SMSConstants.EXPIRED_VERIFICATION_CODE_EXPIRED_MESSAGE);
+
     }
     protected Response getInvalidCodeChallenge(){
-        Response challenge = this.authContext.form()
-                .setError(SMSConstants.INVALID_VERIFICATION_CODE_MESSAGE)
-                .createForm(SMSConstants.SMSCodeInputForm);
-        return challenge;
+        return this.getSMSErrorChallenge(SMSConstants.INVALID_VERIFICATION_CODE_MESSAGE);
+
     }
 
     public Response getErrorChallenge(CODESTATUS status){
         return CODESTATUS.InValid == status ?  getInvalidCodeChallenge() :  getExpiredCodeChallenge();
+    }
+
+    public Response getSMSErrorChallenge(String errorMessage){
+        Response challenge = this.authContext.form()
+                .setError(errorMessage)
+                .createForm(SMSConstants.SMSCodeInputForm);
+        return challenge;
     }
 
     private boolean isExpired(){

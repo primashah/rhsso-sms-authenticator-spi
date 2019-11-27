@@ -62,6 +62,7 @@ public class SMSOptInChallenge {
                 .createForm(SMSOptInForm);
         return challenge;
     }
+
     public Response getErrorChallenge(String errorMessage){
         Response challenge = this.authContext.form()
                 .setError(errorMessage)
